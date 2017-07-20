@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>My JSP 'index.jsp' starting page</title>
+	<script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+	<script type="text/javascript">
+		$(function () { 
+		    $('#container').highcharts({                   //图表展示容器，与div的id保持一致
+		        chart: {
+		            type: 'column'                         //指定图表的类型，默认是折线图（line）
+		        },
+		        title: {
+		            text: 'chaart'      //指定图表标题
+		        },
+		        xAxis: {
+		            categories: ['1月', '2月', '3月']   //指定x轴分组
+		        },
+		        yAxis: {
+		            title: {
+		                text: 'mount（个）'                  //指定y轴的标题
+		            }
+		        },
+		        series: [{                                 //指定数据列
+		            name: 'a',                          //数据列名
+		            data: [1, 0, 4]                        //数据
+		        }, {
+		            name: 'b',
+		            data: [5, 7, 3]
+		        },{
+		            name: 'c',
+		            data: [1, 6, 8]
+		        }]
+		    });
+		});
+	</script>
+  </head>
+  
+  <body>
+    <div id="container" style="min-width:800px;height:400px"></div>
+  </body>
+</html>

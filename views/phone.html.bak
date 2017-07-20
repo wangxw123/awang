@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<title>首页</title>
+</head>
+
+<body>
+<div data-role="page" id="page">
+    <div data-role="header" data-theme="b">
+      <h1>荣程商城</h1>
+    </div>
+    
+     <div data-role="content">
+        <ul data-role="listview">
+                <li><a href="#page1">【手机H5快捷接入】</a></li>
+                <li><a href="#page2">【手机H5退款接口】</a></li>
+                <li><a href="#page3">【手机H5支付结果查询接口】</a></li>
+                <li><a href="#page4">【手机H5查询绑卡信息列表接口】</a></li>
+                <li><a href="#page5">【手机H5解绑卡接口】</a></li>
+        </ul>
+      </div>
+      
+      <div data-role="footer" data-theme="b">
+                <h4>Copyright &copy; 2015 融宝支付</h4>
+      </div>
+</div>
+
+ 
+  <div data-role="page" id="page1">
+	<div data-role="header" data-theme="b">
+	  <a href="#page" data-role="button" data-icon="home">首页</a>
+      	<h1>充值</h1>
+      <a href="#" data-role="button" data-icon="search">搜索</a>
+	</div>
+	   <form action="rongpaytoH5.jsp" method="post" data-ajax="false">
+		<div data-role="content">	
+			    <p class="t">
+		            <label for="cardNo">商品名称:</label>
+		            <input type="text" class="input" name=title id="subject"  />
+		        </p>
+		        
+		        <p class="t">
+		            <label for="cardNo">商品描述:</label>
+		            <input type="text" class="input" name="body" id="body" />
+		        </p>
+		        
+		        <p class="t">
+		            <label for="cardNo">付款金额:</label>
+		            <input type="number" class="input" name="total_fee" id="Rongmoney" />
+		        </p>
+		        <input type="submit" class="button_p2p" value="确认付款"/>
+		</div>
+	  </form>
+	<div data-role="footer" data-theme="b">
+		<h4>Copyright &copy; 2015 融宝支付</h4>
+	</div>
+   </div> 
+    
+    
+    <div data-role="page" id="page2">
+        <div data-role="header" data-theme="b">
+          <a href="#page" data-role="button" data-icon="home">首页</a>
+            <h1>退款</h1>
+          <a href="#" data-role="button" data-icon="search">搜索</a>
+        </div>
+         <form action="refund" method="post" data-ajax="false">
+	        <div data-role="content">	
+	                <p class="t">
+	                    <label for="cardNo">商户号:</label>
+	                    <input type="text" class="merchant_id" name="merchant_id" id="merchant_id"  />
+	                </p>
+	                
+	                <p class="t">
+	                    <label for="cardNo">原订单号:</label>
+	                    <input type="text" class="input" name="orig_order_no" id="orig_order_no" />
+	                </p>
+	                
+	                <p class="t">
+	                    <label for="cardNo">退款金额:</label>
+	                    <input type="number" class="input" name="amount" id="amount" />
+	                </p>
+	                
+	                 <p class="t">
+	                    <label for="cardNo">退款说明:</label>
+	                    <input type="text" class="input" name="note" id="note" />
+	                </p>
+	                <input type="submit" class="button_p2p" value="提交"/>  
+	        </div>
+	      </form>
+        <div data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2015 融宝支付</h4>
+        </div>
+    </div>
+    
+    <div data-role="page" id="page3">
+        <div data-role="header" data-theme="b">
+          <a href="#page" data-role="button" data-icon="home">首页</a>
+            <h1>查询</h1>
+          <a href="#" data-role="button" data-icon="search">搜索</a>
+        </div>
+          <form action="search" method="post" data-ajax="false">
+	        <div data-role="content">	
+	                <p class="t">
+	                    <label for="cardNo">商户号:</label>
+	                    <input type="text" class="merchant_id" name="merchant_id" id="merchant_id"  />
+	                </p>
+	                
+	                <p class="t">
+	                    <label for="cardNo">商户订单号:</label>
+	                    <input type="text" class="input" name="order_no" id="order_no" />
+	                </p>
+	                <input type="submit" class="button_p2p" value="查询"/>  
+	        </div>
+	      </form>  
+        <div data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2015 融宝支付</h4>
+        </div>
+    </div>
+    
+    <div data-role="page" id="page4">
+        <div data-role="header" data-theme="b">
+          <a href="#page" data-role="button" data-icon="home">首页</a>
+            <h1>查询绑卡信息</h1>
+          <a href="#" data-role="button" data-icon="search">搜索</a>
+        </div>
+          <form action="bindlist" method="post" data-ajax="false">
+	        <div data-role="content">	
+	                <p class="t">
+	                    <label for="cardNo">商户号:</label>
+	                    <input type="text" class="merchant_id" name="merchant_id" id="merchant_id"  />
+	                </p>
+	                
+	                <p class="t">
+	                    <label for="cardNo">商户会员号:</label>
+	                    <input type="text" class="input" name="member_id" id="member_id" />
+	                </p>
+	                
+	                 <p class="t">
+	                    <label for="cardNo">卡类型:</label>
+	                    <input type="text" class="input" name="bank_card_type" id="bank_card_type" />
+	                </p>
+	                <input type="submit" class="button_p2p" value="查询"/>  
+	        </div>
+	      </form>  
+        <div data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2015 融宝支付</h4>
+        </div>
+    </div>
+    
+    <div data-role="page" id="page5">
+        <div data-role="header" data-theme="b">
+          <a href="#page" data-role="button" data-icon="home">首页</a>
+            <h1>解绑</h1>
+          <a href="#" data-role="button" data-icon="search">搜索</a>
+        </div>
+        <form action="canclebind" method="post" data-ajax="false">
+	        <div data-role="content">	
+	                <p class="t">
+	                    <label for="cardNo">商户号:</label>
+	                    <input type="text" class="merchant_id" name="merchant_id" id="merchant_id"  />
+	                </p>
+	                
+	                <p class="t">
+	                    <label for="cardNo">商户会员号:</label>
+	                    <input type="text" class="input" name="member_id" id="member_id" />
+	                </p>
+	                
+	                 <p class="t">
+	                    <label for="cardNo">绑卡号:</label>
+	                    <input type="text" class="input" name="bind_id" id="bind_id" />
+	                </p>
+	                <input type="submit" class="button_p2p" value="提交"/>  
+	        </div>
+	      </form>  
+        <div data-role="footer" data-theme="b">
+            <h4>Copyright &copy; 2015 融宝支付</h4>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
